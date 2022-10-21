@@ -10,7 +10,7 @@ A digital stamp appears for that brewery once all guidelines are met by the craf
 ### API's
 
 - beermapping.com
-- penbrewerydb.org
+- openbrewerydb.org
 
 #### Tasks
 
