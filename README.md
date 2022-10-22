@@ -37,4 +37,4 @@ I would like to save my brewing travels and experience
 
 ## Wireframe
 
-![Image of a wireframe prototype.](./fullstacks_project_wireframe_01_crop.png)
+![Image of a wireframe prototype.](./assets/media/images/wireframe/fullstacks_project_wireframe_01_crop.png)
