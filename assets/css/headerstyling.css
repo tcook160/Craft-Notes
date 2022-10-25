@@ -1,20 +1,3 @@
-body {
- background-color: black;
- color: azure;
- margin: 0;
- min-height: 100vh;
- justify-content: center;
- text-align: center;
-}
-
-header {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-nav {
-    justify-content: center;
-}
-
 /* -- IMPORTING FONT-FAMILIES */
 
 @font-face {
@@ -27,20 +10,12 @@ nav {
     src: url(../media/fonts/Xhers\ Regular.otf);
 }
 
-.xhers {
-    font-family: 'Xhers' !important;
-}
-
-.lemon-milk {
-    font-family: 'Lemon Milk' !important;
-}
-
 * {
     margin: 0;
 }
 
 header {
-    text-align: center !important;
+    text-align: center;
     max-width: 100%;
     background-color: #0f0f0f;
     padding-top: 35px;
@@ -53,17 +28,12 @@ h1 {
     color: whitesmoke;
     font-size: 60px;
     user-select: none;
+    margin-top: -10px;
+    margin-bottom: -15px;
 }
 
-.barstyle {
+.divider {
     max-width: 250px;
-    opacity: 75%;
-    user-select: none;
-}
-
-.barstyleform {
-    text-align: center !important;
-    max-width: 200px !important;
     opacity: 75%;
     user-select: none;
 }
@@ -72,5 +42,4 @@ body {
     min-height: 800px;
     max-width: 100%;
     background-image: url(../media/images/site/placeholder_background_003.png);
-    background-position: center;
 }
