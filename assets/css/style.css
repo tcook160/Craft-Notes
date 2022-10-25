@@ -1,22 +1,12 @@
-body {
- background-color: black;
- color: azure;
- margin: 0;
- min-height: 100vh;
- justify-content: center;
- text-align: center;
+/* GENERAL & UNIVERSAL STYLES */
+
+* {
+    margin: 0;
 }
 
-header {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
+/* FONT FAMILIES */
 
-nav {
-    justify-content: center;
-}
-
-/* -- IMPORTING FONT-FAMILIES */
-
+    /* -- IMPORTING FONT-FAMILIES */
 @font-face {
     font-family: 'Lemon Milk';
     src: url(../media/fonts/LEMONMILK-Regular.otf);
@@ -27,6 +17,7 @@ nav {
     src: url(../media/fonts/Xhers\ Regular.otf);
 }
 
+    /* -- FONT-FAMILY CLASSES */
 .xhers {
     font-family: 'Xhers' !important;
 }
@@ -35,9 +26,7 @@ nav {
     font-family: 'Lemon Milk' !important;
 }
 
-* {
-    margin: 0;
-}
+/* HTML SEMANTIC ELEMENTS */
 
 header {
     text-align: center !important;
@@ -53,10 +42,31 @@ h1 {
     color: whitesmoke;
     font-size: 60px;
     user-select: none;
+    margin-bottom: -30px;
 }
 
+h2 {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: whitesmoke;
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: url(../media/images/site/placeholder_background_003.png);
+    background-position: center;
+    justify-content: center;
+}
+   
+nav {
+    justify-content: center;
+}
+
+/* IMAGE STYLING */
+
 .barstyle {
-    max-width: 250px;
+    max-width: 200px;
     opacity: 75%;
     user-select: none;
 }
@@ -66,11 +76,4 @@ h1 {
     max-width: 200px !important;
     opacity: 75%;
     user-select: none;
-}
-
-body {
-    min-height: 800px;
-    max-width: 100%;
-    background-image: url(../media/images/site/placeholder_background_003.png);
-    background-position: center;
 }
