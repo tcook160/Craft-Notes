@@ -22,6 +22,7 @@
             <div class="columns is-mobile mt-5 mb-10">
                 <div class="column is-8 is-offset-2">
                     <div class="card">
+                      <form id="checkin-form">
                         </header>
                         <div class="card-content">
                           <div class="content">
@@ -30,14 +31,14 @@
                             <div class="field mt-5">
                                 <label class="label lemon-milk">Brewery</label>
                                 <div class="control">
-                                  <input class="input" type="text" placeholder="What is the name of the brewery you visited?">
+                                  <input class="input" type="text" name="brewery_name" placeholder="What is the name of the brewery you visited?">
                                 </div>
                               </div>
 
                               <div class="field">
                                 <label class="label lemon-milk">Date</label>
                                 <div class="control">
-                                  <input class="input" type="text" placeholder="When did you visit the brewery?">
+                                  <input class="input" type="text" name="date" placeholder="When did you visit the brewery?">
                                 </div>
                               </div>
 
@@ -142,13 +143,13 @@
 
                               <div class="field is-grouped mt-5">
                                 <div class="control">
-                                  <button class="button is-link">Submit</button>
+                                  <button class="button is-link" id="submit">Submit</button>
                                 </div>
                                 <div class="control">
-                                  <button class="button is-link is-light">Delete</button>
+                                  <button class="button is-link is-light" id="cancel">Cancel</button>
                                 </div>
                               </div>
-                        
+                            </form>
                           </div>
                         </div>
                     
@@ -159,6 +160,8 @@
     <footer>
 
     </footer>
-    <script src="assets/js/script.js"></script>
+     <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/checkin_form.js"></script>
 </body>
 </html>
