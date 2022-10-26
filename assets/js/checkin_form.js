@@ -4,6 +4,8 @@ var breweryElement = $('input[name="brewery_name"]');
 var dateOfCheckinElement = $('input[name="date"]');
 const btn = document.querySelector('#submit');
 const form = document.querySelector('#checkin-form');
+var select = document.getElementById("selectRating");
+var options = ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"];
 
 
 function handleFormSubmit(event) {
@@ -35,6 +37,27 @@ function handleFormCancel(event) {
   console.log('Form Canceled');
 }
 
+
+//This function will leverage API to add search funtionality to the Brewery input field
+//As the user is typing a Brewery, they will observe a suggesgtion dropdown in the input field
+function searchBreweryLocationInput(){}
+
+
+//This fucntion will add a drown-down menu that has four options for ratings: 1 star, 2 stars, 3 stars, 4 stars, 5 stars
+function addBreweryRatingtoInput(){
+  
+  for(var i = 0; i < options.length; i++) {
+      var opt = options[i];
+      var el = document.createElement("option");
+      el.textContent = opt;
+      el.value = opt;
+      select.appendChild(el);
+  }
+
+}
+
+addBreweryRatingtoInput()
+
 // we will use this method to later post the FormData object to the server
 btn.addEventListener('click', (e) => {
   // prevent the form from submitting
@@ -45,15 +68,6 @@ btn.addEventListener('click', (e) => {
   const values = [...formData.entries()];
   console.log(values);
 });
-
-
-//This function will leverage API to add search funtionality to the Brewery input field
-//As the user is typing a Brewery, they will observe a suggesgtion dropdown in the input field
-function searchBreweryLocationInput(){}
-
-//This function will leverage an API to assist the user selecting a rating for the brewery
-//This field will contain a drown-down menu that has four options for ratings: 1 star, 2 stars, 3 stars, 4 stars
-function addBreweryRatingtoInput(){}
 
 //This function will leverage an API to assist the user selecting a rating for the beer they tried
 //This field will contain a drown-down menu that has four options for ratings: 1 star, 2 stars, 3 stars, 4 stars
