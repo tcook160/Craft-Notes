@@ -1,0 +1,79 @@
+/* GENERAL & UNIVERSAL STYLES */
+
+* {
+    margin: 0;
+}
+
+/* FONT FAMILIES */
+
+    /* -- IMPORTING FONT-FAMILIES */
+@font-face {
+    font-family: 'Lemon Milk';
+    src: url(../media/fonts/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Xhers';
+    src: url(../media/fonts/Xhers\ Regular.otf);
+}
+
+    /* -- FONT-FAMILY CLASSES */
+.xhers {
+    font-family: 'Xhers' !important;
+}
+
+.lemon-milk {
+    font-family: 'Lemon Milk' !important;
+}
+
+/* HTML SEMANTIC ELEMENTS */
+
+header {
+    text-align: center !important;
+    max-width: 100%;
+    background-color: #0f0f0f;
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+
+h1 {
+    font-family: 'Xhers';
+    letter-spacing: 3px;
+    color: whitesmoke;
+    font-size: 60px;
+    user-select: none;
+    margin-bottom: -30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: whitesmoke;
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: url(../media/images/site/placeholder_background_003.png);
+    background-position: center;
+    justify-content: center;
+}
+   
+nav {
+    justify-content: center;
+}
+
+/* IMAGE STYLING */
+
+.barstyle {
+    max-width: 200px;
+    opacity: 75%;
+    user-select: none;
+}
+
+.barstyleform {
+    text-align: center !important;
+    max-width: 200px !important;
+    opacity: 75%;
+    user-select: none;
+}
