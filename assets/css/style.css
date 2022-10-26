@@ -61,6 +61,18 @@ body {
    
 nav {
     justify-content: center;
+    padding-bottom: 20px;
+}
+
+.travels {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000
+}
+
+.buttoncollection {
+    align-items: center;
 }
 
 /* IMAGE STYLING */
@@ -68,6 +80,11 @@ nav {
 .barstyle {
     max-width: 200px;
     opacity: 75%;
+    user-select: none;
+}
+
+.barstylebottom {
+    max-width: 200px !important;
     user-select: none;
 }
 

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Craft Notes Digital Brewery Passport</title>
@@ -19,30 +21,31 @@
         <div class="divider"></div>  
     </header>
     <main>
+
         <nav>
-            <input placeholder="Search"></input>
-            <a href="#">
-                <div></div>
-            </a>
-            <a href="#">
-                <div></div>
-            </a>
-            <a href="#">
-                <div></div>
-            </a>
+            <!--<div class="field">
+                <ion-icon name="search-outline"></ion-icon>
+            <input class="input" type="text" placeholder="Search for a location...">
+            </div>-->
+
+            <div class="column is-half is-offset-3 mt-6">
+            <div class="field">
+                <div class="control ">
+                  <input class="input" type="text" placeholder="🍺 Search for local breweries">
+                </div>
+              </div>
+            </div>
+            <center>
+                <button class="button" type="button">Login</button>
+                <button class="button" type="button">Popular Spots</button>
+                <button class="button" type="button">What's Near Me?</button>
+            </center>
         </nav>
+
         <section>
-            <h2>My Brewery Travels</h2>
-            <card class="travels"> 
-                <button type="button">Login</button>
-                <button type="button">Popular Spots</button>
-                <button type="button">What's Near Me?</button>
-                
-                
-                
-                
-                <img src="c:\Users\lycan\Downloads\BFight1.jpg"></img>
-                <h3></h3>
+            <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">My Brewery Travels<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
+            <card"> 
+            
                 <h3 id="My travels"></h3>
                 <h4 id="travel-details"></h4>
                 <p id="travel-textbox"></p>
@@ -62,6 +65,8 @@
             </nav>
          </div>
     </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
