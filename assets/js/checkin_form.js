@@ -5,7 +5,7 @@ var dateOfCheckinElement = $('input[name="date"]');
 const btn = document.querySelector('#submit');
 const form = document.querySelector('#checkin-form');
 var select = document.getElementById("selectRating");
-var options = ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"];
+  var options = ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"];
 
 
 function handleFormSubmit(event) {
@@ -37,12 +37,6 @@ function handleFormCancel(event) {
   console.log('Form Canceled');
 }
 
-
-//This function will leverage API to add search funtionality to the Brewery input field
-//As the user is typing a Brewery, they will observe a suggesgtion dropdown in the input field
-function searchBreweryLocationInput(){}
-
-
 //This fucntion will add a drown-down menu that has four options for ratings: 1 star, 2 stars, 3 stars, 4 stars, 5 stars
 function addBreweryRatingtoInput(){
   
@@ -59,24 +53,42 @@ function addBreweryRatingtoInput(){
 addBreweryRatingtoInput()
 
 // we will use this method to later post the FormData object to the server
-btn.addEventListener('click', (e) => {
+btn.addEventListener('click', async (e) => {
   // prevent the form from submitting
   e.preventDefault();
 
   // create a form data object
   const formData = new FormData(form);
   const values = [...formData.entries()];
-  console.log(values);
+  const data = Object.fromEntries(formData);
+
+  const db = firebase.firestore();
+
+  // ADDING REVIEW TO FIREBASE DB
+  db.collection("reviews").add(data)
+    .then(() => {
+      console.log("Document successfully written!");
+
+      // FETCH ALL REVIEWS
+      console.log("Reviews Output:")
+      db.collection("reviews").get().then(doc => {
+        const allReviews = doc.docs.map(doc => doc.data());
+        console.log(allReviews);
+
+        const list = document.getElementById("result");
+        while(list.firstChild) {
+          list.removeChild(list.firstChild);
+        }
+        allReviews.forEach(r => {
+          const node = document.createElement('li');
+          node.appendChild(document.createTextNode(JSON.stringify(r)))
+          list.appendChild(node)
+        });
+      }).catch(e => {
+        console.log("Error", e)
+      })
+    })
+    .catch((error) => {
+        console.error("Error writing document: ", error);
+    });
 });
-
-//This function will leverage an API to assist the user selecting a rating for the beer they tried
-//This field will contain a drown-down menu that has four options for ratings: 1 star, 2 stars, 3 stars, 4 stars
-function addBeerRatingtoInput(){}
-
-// Submit event on the form
-//formElement.on('submit', handleFormSubmit);
-
-
-// ToDo: Add code to send input data to server
-
-//Beer Mapping API key: 9dac7d6acc6400ddf1e63f04790fb15d
