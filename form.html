@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Craft Notes Digital Brewery Passport</title>
+</head>
+<body>
+    <header>
+        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false">
+        <h1>Craft Notes</h1>
+        <h2 class="lemon-milk mt-3"> A Digital Brewery Passport</h2>  
+        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false">
+        <div class="lower-divider"></div>
+        <div class="divider"></div>  
+    </header>
+    <body>
+            <div class="columns is-mobile mt-5 mb-10">
+                <div class="column is-8 is-offset-2">
+                    <div class="card">
+                      <form id="checkin-form">
+                        </header>
+                        <div class="card-content">
+                          <div class="content">
+                            <h3 class="is-size-1 has-text-centered xhers"> Check-In</h3>
+                            <center><img class="barstyleform" src="./assets/media/images/site/divider-form.png"></center>
+                            <div class="field mt-5">
+                                <label class="label lemon-milk">Brewery</label>
+                                <div class="control">
+                                  <input class="input" type="text" name="brewery_name" placeholder="What is the name of the brewery you visited?">
+                                </div>
+                              </div>
+
+                              <div class="field">
+                                <label class="label lemon-milk">Date</label>
+                                <div class="control">
+                                  <input class="input" type="text" name="date" placeholder="When did you visit the brewery?">
+                                </div>
+                              </div>
+
+                              <div class="field">
+                                <label class="label lemon-milk">Beer Rating</label>
+                                <div class="control">
+                                  <input class="input" type="text" name="beer_rating" placeholder="Choose a Beer Rating">=
+                                  <select id="selectRating">
+                                    <option>Choose a rating</option>
+                                </select>
+                                </div>
+                              </div>
+
+                              <div class="field">
+                                <label class="label lemon-milk">Name</label>
+                                <div class="control">
+                                  <input class="input" type="text" placeholder="Text input">
+                                </div>
+                              </div>
+
+                              <div class="field">
+                                <label class="label lemon-milk">Name</label>
+                                <div class="control">
+                                  <input class="input" type="text" placeholder="Text input">
+                                </div>
+                              </div>
+
+                              <div class="field">
+                                <label class="label lemon-milk">Name</label>
+                                <div class="control">
+                                  <input class="input" type="text" placeholder="Text input">
+                                </div>
+                              </div>
+<!---
+                              <div class="field">
+                                <label class="label">Username</label>
+                                <div class="control has-icons-left has-icons-right">
+                                  <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                  </span>
+                                  <span class="icon is-small is-right">
+                                    <i class="fas fa-check"></i>
+                                  </span>
+                                </div>
+                                <p class="help is-success">This username is available</p>
+                              </div>
+                              
+                              <div class="field">
+                                <label class="label">Email</label>
+                                <div class="control has-icons-left has-icons-right">
+                                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                                  <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                  </span>
+                                  <span class="icon is-small is-right">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                  </span>
+                                </div>
+                                <p class="help is-danger">This email is invalid</p>
+                              </div>
+                              
+                              <div class="field">
+                                <label class="label">Subject</label>
+                                <div class="control">
+                                  <div class="select">
+                                    <select>
+                                      <option>Select dropdown</option>
+                                      <option>With options</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              <div class="field">
+                                <label class="label">Message</label>
+                                <div class="control">
+                                  <textarea class="textarea" placeholder="Textarea"></textarea>
+                                </div>
+                              </div>
+                              
+                              <div class="field">
+                                <div class="control">
+                                  <label class="checkbox">
+                                    <input type="checkbox">
+                                    I agree to the <a href="#">terms and conditions</a>
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              <div class="field">
+                                <div class="control">
+                                  <label class="radio">
+                                    <input type="radio" name="question">
+                                    Yes
+                                  </label>
+                                  <label class="radio">
+                                    <input type="radio" name="question">
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                              
+                            -->
+
+                              <div class="field is-grouped mt-5">
+                                <div class="control">
+                                  <button class="button is-link" id="submit">Submit</button>
+                                </div>
+                                <div class="control">
+                                  <button class="button is-link is-light" id="cancel">Cancel</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                    
+                      </div>
+                </div>
+              </div>
+    </body>
+    <footer>
+
+    </footer>
+     <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/checkin_form.js"></script>
+</body>
+</html>
