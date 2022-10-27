@@ -13,6 +13,11 @@
 }
 
 @font-face {
+    font-family: 'Lemon Milk Light';
+    src: url(../media/fonts/LEMONMILK-Light.otf);
+}
+
+@font-face {
     font-family: 'Xhers';
     src: url(../media/fonts/Xhers\ Regular.otf);
 }
@@ -41,7 +46,6 @@ h1 {
     letter-spacing: 3px;
     color: whitesmoke;
     font-size: 60px;
-    user-select: none;
     margin-bottom: -30px;
 }
 
@@ -64,6 +68,17 @@ nav {
     padding-bottom: 20px;
 }
 
+footer {
+    bottom: 0;
+    text-align: center !important;
+    width: 100%;
+    background-color: #0f0f0f;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 10px;
+    margin-top: 50px;
+}
+
 .travels {
     font-size: 36px;
     letter-spacing: 2px;
@@ -71,8 +86,49 @@ nav {
     text-shadow: 2px 2px 4px #000000
 }
 
-.buttoncollection {
-    align-items: center;
+.burelage {
+    position: static;
+    margin-left: 0;
+    margin-top: -38px;
+    width: 230px;
+}
+
+.burelage-reverse {
+    float: right;
+    position: static;
+    margin-right: 0;
+    margin-top: -38px;
+    width: 230px;
+    transform: scaleX(-1)
+}
+
+.hidden {
+    display: none;
+}
+
+.beige {
+    background-color: bisque;
+    background: url('../media/images/site/passportbg.png');
+    background-position: center;
+    color: #0f0f0f !important;
+    border-radius: 8px;
+}
+
+.passport-page h3 {
+    font-family: 'Xhers';
+    text-align: center;
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.passport-page h4 {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Lemon Milk Light';
+}
+
+.passport-page ul {
+    margin-left: 20px;
 }
 
 /* IMAGE STYLING */

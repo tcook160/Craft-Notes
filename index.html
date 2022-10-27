@@ -5,68 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <title>Craft Notes Digital Brewery Passport</title>
 </head>
+
 <body>
+    <!-- SECTION: JUMBOTRON HEADER -->
     <header>
-        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false">
+        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false" alt="Thin line divider.">
         <h1>Craft Notes</h1>
         <h2 class="lemon-milk mt-3"> A Digital Brewery Passport</h2>  
-        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false">
-        <div class="lower-divider"></div>
-        <div class="divider"></div>  
+        <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false" alt="Thin line divider.">
     </header>
+    <!-- AESTHETICS: BURELAGE -->
+    <img class="burelage" src="./assets/media/images/site/divider-burelage.png" draggable="false" alt="Burelage, or squiggly lines found on stamps, divider.">
+    <img class="burelage-reverse" src="./assets/media/images/site/divider-burelage.png" draggable="false" alt="Burelage, or squiggly lines found on stamps, divider.">
     <main>
-
+        <!-- SECTION: SEARCH BAR NAVIGATOR-->
         <nav>
-            <!--<div class="field">
-                <ion-icon name="search-outline"></ion-icon>
-            <input class="input" type="text" placeholder="Search for a location...">
-            </div>-->
-
-            <div class="column is-half is-offset-3 mt-6">
-            <div class="field">
-                <div class="control ">
-                  <input class="input" type="text" placeholder="🍺 Search for local breweries">
+            <div class="column is-half is-offset-3 mt-4">
+                <div class="field">
+                    <div class="control ">
+                        <input class="input" type="text" placeholder="🍺 Search for local breweries">
+                     </div>
                 </div>
-              </div>
             </div>
             <center>
-                <button class="button" type="button">Login</button>
-                <button class="button" type="button">Popular Spots</button>
-                <button class="button" type="button">What's Near Me?</button>
+                <button id="mytravels-button" class="button" type="button">My Travels</button>
+                <button id="searchhistory-button" class="button" type="button">Search History</button>
             </center>
         </nav>
 
         <section>
-            <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">My Brewery Travels<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
-            <card"> 
+            <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">Local Breweries<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
             
-                <h3 id="My travels"></h3>
+            <div class="column is-two-thirds is-offset-2 mt-5 beige">
+            <div class="columns is-gapless">
+                <div class="column">
+                  <div class="stamps">
+                    search results go here
+                  </div>
+                </div>
+                
+                <div class="column passport-page">
+                  <h3 class="xhers" id="brewery">Sigala Brewery</h3>
+                  <h4 id="visitdate">address</h4>
+                  <ul>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                  </ul>
+                  <center><button id="mytravels-button" class="button" type="button">Check In</button></center>
+                </div>
+                </div>
+
+                <!--
+                <h3 id="my-travels"></h3>
                 <h4 id="travel-details"></h4>
                 <p id="travel-textbox"></p>
-            <button type="My Passport"></button>
+                -->
         </section>
-        <div>
-            <nav>
-                <ul>
-                    <ul><a href="/">Home</a></ul>
-                    <ul><a href="/">Help</a></ul>
-                    <ul><a href="/">Get a ride home</a></ul>
-                    <ul><a href="/">Contact Us</a></ul>
-                    <ul><a href="/">User Reviews</a></ul>
-                </ul>
+
+        <section>
+            <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">My Brewery Travels<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
+            
+            <div class="column is-two-thirds is-offset-2 mt-5 beige">
+            <div class="columns is-gapless">
+                <div class="column">
+                  <div class="stamps">
+                    stamps GO HERE
+                  </div>
+                </div>
                 
-               
-            </nav>
-         </div>
-    </body>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                <div class="column passport-page">
+                  <h3 class="xhers" id="brewery">Sigala Brewery</h3>
+                  <h4 id="visitdate">October 26th, 2022</h4>
+                  <ul>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                    <li>item</li>
+                  </ul>
+                </div>
+                </div>
+
+                <!--
+                <h3 id="my-travels"></h3>
+                <h4 id="travel-details"></h4>
+                <p id="travel-textbox"></p>
+                -->
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <ul><a href="/">Home</a></ul>
+            <ul><a href="/">Help</a></ul>
+            <ul><a href="/">Get a ride home</a></ul>
+            <ul><a href="/">Contact Us</a></ul>
+            <ul><a href="/">User Reviews</a></ul>
+        </nav>
+   </footer>
+</body>
 <script src="assets/js/script.js"></script>
 </body>
 </html>
