@@ -5,7 +5,7 @@ var dateOfCheckinElement = $('input[name="date"]');
 const btn = document.querySelector('#submit');
 const form = document.querySelector('#checkin-form');
 var select = document.getElementById("selectRating");
-  var options = ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"];
+var options = ["1 star", "2 stars", "3 stars", "4 stars", "5 stars"];
 
 
 function handleFormSubmit(event) {
@@ -68,25 +68,7 @@ btn.addEventListener('click', async (e) => {
   db.collection("reviews").add(data)
     .then(() => {
       console.log("Document successfully written!");
-
-      // FETCH ALL REVIEWS
-      console.log("Reviews Output:")
-      db.collection("reviews").get().then(doc => {
-        const allReviews = doc.docs.map(doc => doc.data());
-        console.log(allReviews);
-
-        const list = document.getElementById("result");
-        while(list.firstChild) {
-          list.removeChild(list.firstChild);
-        }
-        allReviews.forEach(r => {
-          const node = document.createElement('li');
-          node.appendChild(document.createTextNode(JSON.stringify(r)))
-          list.appendChild(node)
-        });
-      }).catch(e => {
-        console.log("Error", e)
-      })
+      $('input[type="text"]').val('');
     })
     .catch((error) => {
         console.error("Error writing document: ", error);
