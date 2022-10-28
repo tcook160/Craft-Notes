@@ -47,7 +47,6 @@ function addBreweryRatingtoInput(){
       el.value = opt;
       select.appendChild(el);
   }
-
 }
 
 addBreweryRatingtoInput()
@@ -56,6 +55,10 @@ addBreweryRatingtoInput()
 btn.addEventListener('click', async (e) => {
   // prevent the form from submitting
   e.preventDefault();
+
+
+  var selectionVal = document.getElementById("selectRating").value
+  console.log("Rating:", selectionVal);
 
   // create a form data object
   const formData = new FormData(form);
@@ -74,3 +77,4 @@ btn.addEventListener('click', async (e) => {
         console.error("Error writing document: ", error);
     });
 });
+

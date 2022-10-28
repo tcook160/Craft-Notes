@@ -20,8 +20,10 @@ db.collection("reviews").get().then((onSnapshot) => {
         let data = doc.data();
         let row  = `<tr>
                         <td>${data.brewery_name}</td>
-                        <td>${data.beer_rating}</td>
                         <td>${data.date}</td>
+                        <td>${data.type}</td>
+                        <td>${data.rating}</td>
+
                   </tr>`;
         let table = document.getElementById('myTable')
         table.innerHTML += row
