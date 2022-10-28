@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Craft Notes: Reviews</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./assets/media/images/site/divider-top.png"
+        class="barstyle"
+        draggable="false"
+      />
+      <h1>Craft Notes: Reviews</h1>
+      <img
+        src="./assets/media/images/site/divider-top.png"
+        class="barstyle"
+        draggable="false"
+      />
+      <div class="lower-divider"></div>
+      <div class="divider"></div>
+    </header>
+    <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th>Brewery Name</th>
+          <th>Beer Rating</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="myTable"></tbody>
+    </table>
+    <footer></footer>
+    <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="assets/js/reviews.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    </script>
+  </body>
+</html>
