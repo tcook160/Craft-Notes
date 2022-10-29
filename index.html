@@ -32,14 +32,16 @@
         <nav>
             <div class="column is-half is-offset-3 mt-4">
                 <div class="field">
-                    <div class="control">
-                        <input id="searchbar" class="input" type="text" placeholder="🍺 Search for local breweries">
+                    <div id="searchWrapper">
+                        <input name="searchbar" id="searchbar" class="input" type="text" placeholder="🍺 Search for local breweries">
                      </div>
                 </div>
             </div>
             <center>
+                <!--
                 <button id="mytravels-button" class="button" type="button">My Travels</button>
                 <button id="searchhistory-button" class="button" type="button">Search History</button>
+                -->
             </center>
         </nav>
 
@@ -49,14 +51,9 @@
             <div class="column is-two-thirds is-offset-2 mt-5 beige">
             <div class="columns is-gapless">
                 <div class="column">
-                  <div class="stamps">
-                    Tim's Brewery<br>
-                    Sigala Brewery<br>
-                    Christian Brewery<br>
-                    Kenan Brewery
-                  </div>
+                  <ul id="BreweryList"></ul>
                 </div>
-                
+                <!--
                 <div class="column passport-page">
                   <h3 class="xhers" id="brewery">Sigala Brewery</h3>
                   <h4 id="visitdate">address</h4>
@@ -68,6 +65,7 @@
                   </ul>
                   <center><button id="mytravels-button" class="button" type="button">Check In</button></center>
                 </div>
+                -->
                 </div>
 
                 <!--
@@ -76,7 +74,7 @@
                 <p id="travel-textbox"></p>
                 -->
         </section>
-
+        <!--
         <section >
             <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">My Brewery Travels<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
             
@@ -100,12 +98,13 @@
                 </div>
                 </div>
 
-                <!--
+              
                 <h3 id="my-travels"></h3>
                 <h4 id="travel-details"></h4>
                 <p id="travel-textbox"></p>
                 -->
         </section>
+        -->
     </main>
     <footer>
         <ul>
@@ -117,6 +116,7 @@
         </nav>
    </footer>
 </body>
-<script src="assets/js/script.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </body>
 </html>

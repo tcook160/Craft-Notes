@@ -1,27 +1,65 @@
+//URL for Locquery service in Beer Mapping API
 var urlBeerMapping = 'https://beermapping.com/webservice/loccity/9dac7d6acc6400ddf1e63f04790fb15d/'
 
-var searchEl = $('#searchbar')
+//By default, the query returns a xml file
+//Add this delimiter to the URL to return json file
+var jsonDelimiter = "&s=json"
 
-function handleSearchFormSubmit(event) {
-    event.preventDefault()
-    var searchInputVal = document.querySelector('#searchbar').value
+//get id for search bar and brewery list output
+const searchBar = document.getElementById('searchbar');
+const BreweryList = document.getElementById('BreweryList');
 
-    if (!searchInputVal) {
-        return
-    }
-}
+//store beer mapping api response in an array
+let BreweryResults = [];
 
-var searchInputValModified = searchInputVal.toLowerCase()
-var queryString = urlBeerMapping + searchInputValModified + '&s=json'
+//store user input from search bar
+let searchStringCity;
 
-searchEl.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      
-        // code goes here
+//listen for user input in search bar
+//user will search for a City where they want to find breweries
+searchBar.addEventListener('keyup', (e) => {
+    searchStringCity = e.target.value.toLowerCase();
+    console.log(searchStringCity);
 
-    }
+    loadBreweries();
+
 });
 
+//function will use fetch to call beer mapping API
+const loadBreweries = async () => {
+    try {
+        //Locquery service searches for Locations by querying the location name.
+        const res = await fetch(urlBeerMapping + searchStringCity + jsonDelimiter);
+        console.log(res);
+
+        //store query results(json file) in an array
+        BreweryResults = await res.json();
+        console.log(BreweryResults);
+
+        displayBreweries(BreweryResults);
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+//Display query results in index.html
+const displayBreweries = (breweries) => {
+    const htmlString = breweries
+        .map((breweries) => {
+            return `
+            <li class="breweries">
+                <h2>${breweries.name}</h2>
+                <p>Street:: ${breweries.street}</p>
+                <p>Phone: ${breweries.phone}</p>
+                <p>&nbsp;</p> 
+                <p></p> 
+              
+            </li>
+        `;
+        })
+        .join('');
+    BreweryList.innerHTML = htmlString;
+};
 
 //value input into the search bar --> lowercase, trim space
 // split string into array based on comma as a separator, 
