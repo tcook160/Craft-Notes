@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    color: white
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 60px auto;
+    text-align: center;
+    font-size: 100px;
+    width: 50vw;
+    height: 60vh;
+    background-color: #000000;
+    object-fit: scale-down;
+    position: relative;
+  }
+
+  H6 {
+    font-size: large;
+    color:blueviolet
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    width: 10px;
+    height: 30px;
+    padding-top: 20px;
+    margin: 40px auto;
+  }
+  
