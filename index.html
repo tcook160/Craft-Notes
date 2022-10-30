@@ -14,15 +14,9 @@
     <!-- SECTION: JUMBOTRON HEADER -->
     <header>
         <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false" alt="Thin line divider.">
-        <h1>Craft Notes</h1>
+        <h1><a href="index.html">Craft Notes</a></h1>
         <h2 class="lemon-milk mt-3"> A Digital Brewery Passport</h2>  
         <img src="./assets/media/images/site/divider-top.png" class="barstyle" draggable="false" alt="Thin line divider.">
-        <div class="lemon-milk mt-3">
-        <a class="lemon-milk mt-3" href="#home">Home</a>
-         <ul><a href="/form.html">Sumbit a Review</a></ul> 
-         <ul><a href="/reviews.html">Past Reviews</a></ul>
-         <ul><a href="/contactus.html">Contact Us</a></ul>
-        </div>
     </header>
     <!-- AESTHETICS: BURELAGE -->
     <img class="burelage" src="./assets/media/images/site/divider-burelage.png" draggable="false" alt="Burelage, or squiggly lines found on stamps, divider.">
@@ -38,23 +32,25 @@
                 </div>
             </div>
             <center>
-                <!--
-                <button id="mytravels-button" class="button" type="button">My Travels</button>
-                <button id="searchhistory-button" class="button" type="button">Search History</button>
-                -->
+                <button id="mytravels-button" class="button is-small" type="button">Passport</button>
+                <button id="checkin-button" class="button is-small" type="button">Check-In</button>
+                <button id="searchhistory-button" class="button is-small" type="button">Search History</button>
+                <button id="reviews-button" class="button is-small" type="button">New Reviews</button>
             </center>
         </nav>
 
-        <section>
+        <section id="localBreweriesSection" class="hidden">
             <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">Local Breweries<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
             
             <div class="column is-two-thirds is-offset-2 mt-5 beige">
             <div class="columns is-gapless">
                 <div class="column">
-                  <ul id="BreweryList"></ul>
+                  <ul id="BreweryList">
+                  </ul>
                 </div>
                 <!--
                 <div class="column passport-page">
+
                   <h3 class="xhers" id="brewery">Sigala Brewery</h3>
                   <h4 id="visitdate">address</h4>
                   <ul>
@@ -63,10 +59,9 @@
                     <li>etc</li>
                     <li>item</li>
                   </ul>
-                  <center><button id="mytravels-button" class="button" type="button">Check In</button></center>
+                  <center><button id="mytravels-button" class="button" type="button">Check In</button></center> -->
                 </div>
-                -->
-                </div>
+                </div> -->
 
                 <!--
                 <h3 id="my-travels"></h3>
@@ -74,8 +69,84 @@
                 <p id="travel-textbox"></p>
                 -->
         </section>
-        <!--
-        <section >
+
+        <section id="checkinSection" class="hidden">
+
+          <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">Check-In<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
+
+          <div class="columns is-mobile mt-5 mb-10">
+            <div class="column is-two-thirds is-offset-2">
+                <div class="card">
+                  <form id="checkin-form">
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <div class="field mt-2">
+                            <label class="label lemon-milk">Brewery</label>
+                            <div class="control">
+                              <input class="input" type="text" name="brewery_name" placeholder="What is the name of the brewery you visited?">
+                            </div>
+                          </div>
+
+                          <div class="field">
+                            <label class="label lemon-milk">Date</label>
+                            <div class="control">
+                              <input class="input" type="text" name="date" placeholder="When did you visit the brewery?">
+                            </div>
+                          </div>
+
+                          <div class="field">
+                            <label class="label lemon-milk">Type of Beer</label>
+                            <div class="control">
+                              <input class="input" type="text" name="type" placeholder="What type of beer did you have?">
+                            </div>
+                          </div>
+
+                          <div class="field">
+                            <label class="label lemon-milk">Beer Rating</label>
+                              <span class="control select">
+                                <select id="selectRating" name="rating">
+                                  <option>Choose a rating</option>
+                              </select>
+                              </span>
+                          </div>
+                          <div class="field is-grouped mt-5">
+                            <div class="control">
+                              <button class="button is-link" id="submit">Submit</button>
+                            </div>
+                            <div class="control">
+                              <button class="button is-link is-light" id="cancel">Cancel</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviewsSection" class="hidden">
+          <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">New Reviews<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
+            
+            <div class="column is-two-thirds is-offset-2 mt-5 beige">
+              <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Brewery Name</th>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable"></tbody>
+              </table>
+            </div>
+
+        </section>
+
+
+        <section id="passportSection">
             <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">My Brewery Travels<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
             
             <div class="column is-two-thirds is-offset-2 mt-5 beige">
@@ -102,9 +173,8 @@
                 <h3 id="my-travels"></h3>
                 <h4 id="travel-details"></h4>
                 <p id="travel-textbox"></p>
-                -->
         </section>
-        -->
+
     </main>
     <footer>
         <ul>
@@ -115,8 +185,36 @@
             <ul><a href="/">User Reviews</a></ul>
         </nav>
    </footer>
-</body>
 <script src="assets/js/search.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="assets/js/reviews.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+    </script>
+<script src="assets/js/checkin_form.js"></script>
+<script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAyZkiv10kkdt_EVvFVzXy_TVA9XodHskk",
+          authDomain: "beer-reviews-a6706.firebaseapp.com",
+          projectId: "beer-reviews-a6706",
+          storageBucket: "beer-reviews-a6706.appspot.com",
+          messagingSenderId: "83918663319",
+          appId: "1:83918663319:web:0cde16a932042a923bc3d2",
+          databaseURL: "https://beer-reviews-a6706.firebaseio.com/",
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+</script>
 </body>
 </html>
