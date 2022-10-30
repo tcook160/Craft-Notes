@@ -31,6 +31,10 @@
     font-family: 'Lemon Milk' !important;
 }
 
+.lemon-milk-light {
+    font-family: 'Lemon Milk Light' !important;
+}
+
 /* HTML SEMANTIC ELEMENTS */
 
 header {
@@ -49,8 +53,39 @@ h1 {
     margin-bottom: -30px;
 }
 
+h1 a {
+    color: whitesmoke;
+}
+
+h1 a:hover {
+    color: goldenrod;
+}
+
 h2 {
     margin-bottom: 10px;
+}
+
+#BreweryList {
+    margin-left: 10px;
+}
+
+#BreweryList p {
+    margin-top: 7px;
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+#BreweryList button {
+    font-family: 'Xhers';
+    letter-spacing: 1px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#BreweryList summary {
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 3px;
 }
 
 body {
@@ -61,6 +96,7 @@ body {
     background-image: url(../media/images/site/placeholder_background_003.png);
     background-position: center;
     justify-content: center;
+    background-attachment: fixed;
 }
    
 nav {
@@ -108,7 +144,7 @@ footer {
 
 .beige {
     background-color: bisque;
-    background: url('../media/images/site/passportbg.png');
+    background: url('../media/images/site/passportbg-noline.png');
     background-position: center;
     color: #0f0f0f !important;
     border-radius: 8px;
@@ -130,6 +166,11 @@ footer {
 .passport-page ul {
     margin-left: 20px;
 }
+
+.breweries {
+    margin-bottom: 20px;
+}
+
 
 /* IMAGE STYLING */
 
