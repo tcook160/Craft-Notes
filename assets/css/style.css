@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+::selection {
+    color: #0f0f0f;
+    background-color: gold;
+}
+
 /* FONT FAMILIES */
 
     /* -- IMPORTING FONT-FAMILIES */
@@ -36,6 +41,10 @@
 }
 
 /* HTML SEMANTIC ELEMENTS */
+
+a:hover {
+    color: gold;
+}
 
 header {
     text-align: center !important;
@@ -104,17 +113,6 @@ nav {
     padding-bottom: 20px;
 }
 
-footer {
-    bottom: 0;
-    text-align: center !important;
-    width: 100%;
-    background-color: #0f0f0f;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 10px;
-    margin-top: 50px;
-}
-
 .travels {
     font-size: 36px;
     letter-spacing: 2px;
@@ -171,6 +169,34 @@ footer {
     margin-bottom: 20px;
 }
 
+footer {
+    font-family: 'Lemon Milk';
+    bottom: 0;
+    width: 100%;
+    background-color: #0f0f0f;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    font-size: 10px;
+    margin-top: 50px;
+}
+
+footer h3 {
+    color: #858585;
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+footer li {
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+footer a {
+    color: #434343;
+}
+
 
 /* IMAGE STYLING */
 
@@ -190,4 +216,8 @@ footer {
     max-width: 200px !important;
     opacity: 75%;
     user-select: none;
+}
+
+.stamp {
+    width: 55px;
 }
