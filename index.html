@@ -32,10 +32,9 @@
                 </div>
             </div>
             <center>
-                <button id="mytravels-button" class="button is-small" type="button">Passport</button>
-                <button id="checkin-button" class="button is-small" type="button">Check-In</button>
-                <button id="searchhistory-button" class="button is-small" type="button">Search History</button>
-                <button id="reviews-button" class="button is-small" type="button">New Reviews</button>
+                <button id="mytravels-button" class="button is-rounded is-hovered" type="button">Passport</button>
+                <button id="checkin-button" class="button is-rounded" type="button">Check-In</button>
+                <button id="reviews-button" class="button is-rounded" type="button">New Reviews</button>
             </center>
         </nav>
 
@@ -75,7 +74,7 @@
           <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">Check-In<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
 
           <div class="columns is-mobile mt-5 mb-10">
-            <div class="column is-two-thirds is-offset-2">
+            <div class="column is-two-thirds is-offset-2 beige">
                 <div class="card">
                   <form id="checkin-form">
                     </header>
@@ -98,7 +97,7 @@
                           <div class="field">
                             <label class="label lemon-milk">Type of Beer</label>
                             <div class="control">
-                              <input class="input" type="text" name="type" placeholder="What type of beer did you have?">
+                              <input class="input" type="text" name="type" placeholder="What type of beer did you have?" id="brewtype">
                             </div>
                           </div>
 
@@ -152,21 +151,23 @@
             <div class="column is-two-thirds is-offset-2 mt-5 beige">
             <div class="columns is-gapless">
                 <div class="column">
-                  <div class="stamps">
-                    stamps GO HERE
-                  </div>
+                  <img class="passportstamps">
+                    <!-- TESTING / WILL REMOVE -->
+                    <img src="./assets/media/images/stamps/cn_stamp_001_red.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_002_blue.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_003_lightorange.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_001_red.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_003_magenta.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_001_green.png" class="stamp" alt="image of a stamp">
+                    <img src="./assets/media/images/stamps/cn_stamp_003_red.png" class="stamp" alt="image of a stamp">
+                    </img>
                 </div>
                 
                 <div class="column passport-page">
-                  <h3 class="xhers" id="brewery">Sigala Brewery</h3>
-                  <h4 id="visitdate">October 26th, 2022</h4>
-                  <ul>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                    <li>item</li>
-                  </ul>
-                </div>
+                  <ul id="id="tempbrewpage></ul>
+                  <!--<h3 class="xhers" id="brewery"></h3>
+                  <h4 id="visitdate"></h4>-->
+                </ul>
                 </div>
 
               
@@ -177,13 +178,13 @@
 
     </main>
     <footer>
+        <h3>Craft Notes</h3>
         <ul>
-            <ul><a href="/">Home</a></ul>
-            <ul><a href="/">Help</a></ul>
-            <ul><a href="/">Get a ride home</a></ul>
-            <ul><a href="/">Contact Us</a></ul>
-            <ul><a href="/">User Reviews</a></ul>
-        </nav>
+          <li><a href="/">Our Story</a></li> 
+          <li><a href="indexrs.html">Get a ride home</a></li>  
+          <li><a href="contactus.html">Contact Us</a></li> 
+          <li><a href="https://github.com/tcook160/Craft-Notes">Github</a></li>   
+        </ul>
    </footer>
 <script src="assets/js/search.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
