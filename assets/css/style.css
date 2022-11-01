@@ -75,7 +75,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Lemon Milk';
     font-size: 20px !important;
     margin-bottom: 10px;
 }
@@ -230,4 +229,15 @@ footer a {
 
 img .imgEl {
     width: 300px;
+}
+
+@media screen and (max-width: 768px) { 
+    h2 {
+        font-size: 21px !important;
+    }
+    
+    .barstylebottom {
+        max-width: 75px !important;
+        user-select: none;
+    }
 }
