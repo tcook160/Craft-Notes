@@ -4,6 +4,7 @@ const localBrewSection = document.querySelector('#localBreweriesSection')
 const passportSection = document.querySelector('#passportSection')
 const checkinSection = document.querySelector('#checkinSection')
 const reviewsSection = document.querySelector('#reviewsSection')
+const storySection = document.querySelector('#storySection')
 
 //identifies area for search results to be posted
 var brewPrintResults = document.getElementById('BreweryList')
@@ -38,6 +39,7 @@ searchBar.addEventListener('keypress', function (e) {
     checkinSection.classList.add("hidden")
     reviewsSection.classList.add("hidden")
     passportSection.classList.add("hidden")
+    storySection.classList.add("hidden")
 
     loadBreweries();
     }
@@ -81,6 +83,7 @@ function showTravels() {
     localBrewSection.classList.add("hidden")
     checkinSection.classList.add("hidden")
     reviewsSection.classList.add("hidden")
+    storySection.classList.add("hidden")
     passportSection.classList.remove("hidden")
 }
 
@@ -90,6 +93,7 @@ function showCheckinForm() {
     localBrewSection.classList.add("hidden")
     passportSection.classList.add("hidden")
     reviewsSection.classList.add("hidden")
+    storySection.classList.add("hidden")
     checkinSection.classList.remove("hidden")
 }
 
@@ -99,16 +103,25 @@ function showReviews() {
     localBrewSection.classList.add("hidden")
     passportSection.classList.add("hidden")
     checkinSection.classList.add("hidden")
+    storySection.classList.add("hidden")
     reviewsSection.classList.remove("hidden")
+}
+
+// button function to show review section
+const storyEl = document.getElementById('story-link');
+function showStory() {
+    localBrewSection.classList.add("hidden")
+    passportSection.classList.add("hidden")
+    checkinSection.classList.add("hidden")
+    reviewsSection.classList.add("hidden")
+    storySection.classList.remove("hidden")
 }
 
 // allows buttons to work
 passportEl.addEventListener('click', showTravels)
 checkinEl.addEventListener('click', showCheckinForm)
 reviewsEl.addEventListener('click', showReviews)
-
-
-
+storyEl.addEventListener('click', showStory)
 
 /*
 

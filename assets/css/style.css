@@ -75,6 +75,7 @@ h2 {
 }
 
 h3 {
+    font-family: 'Lemon Milk';
     font-size: 20px !important;
     margin-bottom: 10px;
 }
@@ -225,4 +226,8 @@ footer a {
 
 .stamp {
     width: 55px;
+}
+
+img .imgEl {
+    width: 300px;
 }

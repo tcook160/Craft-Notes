@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="icon" href="./assets/media/images/stamps/cn_stamp_001_blue.png">
-    <title>Craft Notes Digital Brewery Passport</title>
+    <title>Craft Notes</title>
 </head>
 
 <body>
@@ -169,11 +169,35 @@
                 <p id="travel-textbox"></p>
         </section>
 
+        <section id="storySection" class="hidden">
+          <h2 class="xhers travels"><img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false">Our Story<img src="./assets/media/images/site/divider-smaller.png" class="barstylebottom" draggable="false"></h2>
+          
+          <div class="column is-two-thirds is-offset-2 mt-5 beige">
+          <div class="columns is-gapless">
+              <div class="column">
+                <div id="storytime">
+                  <div class="carouselContainer">
+                    <div class="wrapper">
+                      <p>We are a passionate group of Full Stack Developers who love the intersection between creating full stack applications and brewery culture!</p><br>
+                      <center><button type="button" id="btnEl" class=" button prev">
+                        ◀ Previous
+                      </button>
+                      <button class="button next">
+                        Next ▶ 
+                      </button><br><br>
+                      <img id="imgEl" src="./assets/media/brewery-img-1.jpg" style="width: 300px;"></center>
+                    </div>
+                  </div>
+                    <script src="./assets/js/carousel.js"></script>
+                </div> 
+              </div>
+      </section>
+
     </main>
     <footer>
         <h3>Craft Notes</h3>
         <ul>
-          <li><a href="/">Our Story</a></li> 
+          <li><a id="story-link">Our Story</a></li> 
           <li><a href="indexrs.html">Get a ride home</a></li>  
           <li><a href="contactus.html">Contact Us</a></li> 
           <li><a href="https://github.com/tcook160/Craft-Notes">Github</a></li>   
