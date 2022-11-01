@@ -4,7 +4,7 @@
 
 ![Image of the deployed website.](./assets/media/images/repo/cn_screenshot_01.png)
 
-The deployed repository can be found at the following url: 
+The deployed repository can be found at the following url: https://tcook160.github.io/Craft-Notes/index.html
 
 ## User Story
 
