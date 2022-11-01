@@ -1,56 +1,25 @@
+$(document).on("click", ".stamp", showDetails)
+
 //create array for all stamp images to be randomly assigned later
-var stampArray = new Array();
-  stampArray[0] = new Image()
-  stampArray[0].src = './assets/media/images/stamps/cn_stamp_001_blue.png'
-
-  stampArray[1] = new Image()
-  stampArray[1].src = './assets/media/images/stamps/cn_stamp_001_green.png'
-
-  stampArray[2] = new Image()
-  stampArray[2].src = './assets/media/images/stamps/cn_stamp_001_lightblue.png'
-
-  stampArray[3] = new Image()
-  stampArray[3].src = './assets/media/images/stamps/cn_stamp_001_lightred.png'
-
-  stampArray[4] = new Image()
-  stampArray[4].src = './assets/media/images/stamps/cn_stamp_001_orange.png'
-
-  stampArray[5] = new Image()
-  stampArray[5].src = './assets/media/images/stamps/cn_stamp_001_red.png'
-
-  stampArray[6] = new Image()
-  stampArray[6].src = './assets/media/images/stamps/cn_stamp_002_blue.png'
-
-  stampArray[7] = new Image()
-  stampArray[7].src = './assets/media/images/stamps/cn_stamp_002_darkblue.png'
-
-  stampArray[8] = new Image()
-  stampArray[8].src = './assets/media/images/stamps/cn_stamp_002_magenta.png'
-
-  stampArray[9] = new Image()
-  stampArray[9].src = './assets/media/images/stamps/cn_stamp_002_orange.png'
-
-  stampArray[10] = new Image()
-  stampArray[10].src = './assets/media/images/stamps/cn_stamp_002_pink.png'
-
-  stampArray[11] = new Image()
-  stampArray[11].src = './assets/media/images/stamps/cn_stamp_002_red.png'
-
-  stampArray[12] = new Image()
-  stampArray[12].src = './assets/media/images/stamps/cn_stamp_003_blue.png'
-
-  stampArray[13] = new Image()
-  stampArray[13].src = './assets/media/images/stamps/cn_stamp_003_lightorange.png'
-
-  stampArray[14] = new Image()
-  stampArray[14].src = './assets/media/images/stamps/cn_stamp_003_magenta.png'
-
-  stampArray[15] = new Image()
-  stampArray[15].src = './assets/media/images/stamps/cn_stamp_003_orange.png'
-
-  stampArray[16] = new Image()
-  stampArray[16].src = './assets/media/images/stamps/cn_stamp_003_red.png'
-console.log(stampArray)
+var stampArray = [
+  'cn_stamp_001_blue',
+  'cn_stamp_001_green',
+  'cn_stamp_001_lightblue',
+  'cn_stamp_001_lightred',
+  'cn_stamp_001_orange',
+  'cn_stamp_001_red',
+  'cn_stamp_002_blue',
+  'cn_stamp_002_darkblue',
+  'cn_stamp_002_magenta',
+  'cn_stamp_002_orange',
+  'cn_stamp_002_pink',
+  'cn_stamp_002_red',
+  'cn_stamp_003_blue',
+  'cn_stamp_003_lightorange',
+  'cn_stamp_003_magenta',
+  'cn_stamp_003_orange',
+  'cn_stamp_003_red',
+]
 
 //definitions of input fields
 var formElement = $('#checkin-form');
@@ -126,7 +95,7 @@ btn.addEventListener('click', async (e) => {
     breweryName: storeName,
     breweryDate: storeDate,
     breweryRating: selectionVal,
-    breweryStamp: stampArray[Math.floor(Math.random()*stampArray.length)]
+    breweryStamp: './assets/media/images/stamps/' + stampArray[Math.floor(Math.random()*stampArray.length)] + '.png'
   }
   brewEntry.push(newBrewEntry);
   window.localStorage.setItem('brewEntry', JSON.stringify(brewEntry))
@@ -153,6 +122,11 @@ btn.addEventListener('click', async (e) => {
 var stampPassportEl = $('#passportstamps')
 var namePassportEl = $('#tempbrewpage')
 
+function showDetails() {
+  console.log('clicked')
+
+}
+
 function showTravels() {
   // checks to see if there are any items in local storage
   var brewEntry = JSON.parse(window.localStorage.getItem("brewEntry")) || []
@@ -160,16 +134,19 @@ function showTravels() {
   // prints all stamps in local storage
   for (var i = 0; i < brewEntry.length; i++) {
     var printStamps = document.createElement('img')
-    printStamps.img = brewEntry[i].breweryStamp
-
+    printStamps.src = brewEntry[i].breweryStamp
+    $(printStamps).addClass('stamp')
     stampPassportEl.append(printStamps);
+    $(printStamps).click(function(i){
+      showDetails(i)
+    })
   }
 
   for (var i = 0; i < brewEntry.length; i++) {
-    var printNamesOut = document.createElement('p')
-    printNamesOut.img = brewEntry[i].breweryName
+    var printNamesOut = document.createElement('li')
+    printNamesOut.textContent = brewEntry[i].breweryName
 
-    namePassportEl.appendChild(printNamesOut);
+    namePassportEl.append(printNamesOut);
     console.log(brewEntry)
   }
 }
